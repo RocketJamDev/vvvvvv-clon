@@ -10,12 +10,6 @@ public class Transition : MonoBehaviour
     public Transform rightRoom;
     public Transform topRoom;
     public Transform bottomRoom;
-
-    private void Start()
-    {
-        
-    }
-
 }
 
 [CustomEditor(typeof(Transition))]

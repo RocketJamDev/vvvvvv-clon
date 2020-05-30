@@ -154,6 +154,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   spawnPoint: {fileID: 0}
+  jump: {fileID: 8300000, guid: 97c77f7d7e078da45a01f778d4490dc0, type: 3}
+  death: {fileID: 8300000, guid: 9baab24f6260b5043954c3997633c10e, type: 3}
+  trinketOrCheckpoint: {fileID: 8300000, guid: 9f9abd0a3c75ae74c89e6a9a984ad6a3, type: 3}
   facingRight: 1
   facingUp: 1
 --- !u!95 &1971065283956255873

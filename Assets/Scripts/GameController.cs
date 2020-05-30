@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
     public void AddTrinket() 
     {
         trinketsCollected++;
-
+        
+        // Comprobamos si hemos conseguido el objetivo.
         if (CheckVictory() == false) 
         { 
             trinketCount.text = trinketsCollected.ToString();
@@ -35,23 +36,20 @@ public class GameController : MonoBehaviour
 
     public void ActivateCheckpoint(GameObject newCheckpoint) 
     {
+        // Si había un checkpoint antiguo lo desactivamos.
         if (activeCheckpoint)
         {
-            if (GameObject.ReferenceEquals(newCheckpoint, activeCheckpoint))
-            { 
-                return;
-            }
             activeCheckpoint.GetComponent<Checkpoint>().Deactivate();
         }
 
-        Debug.Log("Activando nuevo checkpoint");
-
+        // Marcamos el checkpoint como activo.
         activeCheckpoint = newCheckpoint;
         activeCheckpoint.GetComponent<Checkpoint>().Activate();
     }
 
     public void MoveCameraToRespawn()
     {
+        // Damos por hecho que el respawn es hijo de una habitación.
         Vector2 newPosition = activeCheckpoint.transform.parent.transform.position;
         MoveCamera(newPosition);
     }

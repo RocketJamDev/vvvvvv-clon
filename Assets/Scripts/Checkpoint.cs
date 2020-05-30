@@ -8,7 +8,8 @@ public class Checkpoint : MonoBehaviour
     public Color activeColor;
 
     private SpriteRenderer spriteRenderer;
-    private bool isActive;
+    [HideInInspector]
+    public bool isActive;
 
     void Start()
     {
